@@ -1,0 +1,36 @@
+server:
+  servlet:
+    context-path: /api/easy-alphabet/
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 4024KB
+      max-request-size: 4024KB
+  profiles:
+    active: local
+  application:
+    name: ea-main
+
+management:
+  endpoints:
+    enabled-by-default: false
+    web.exposure.include: info,health,prometheus
+  endpoint:
+    health.enabled: true
+    prometheus.enabled: false
+    info.enabled: true
+
+open-api.properties:
+  info:
+    title: Easy-Alphabet
+    version: 1.0.0
+    description: The main backend service of the easy-alphabet app
+    contact:
+      url: https://www.linkedin.com/in/danila-kharlamov-295907228/
+      email: danila.kharlamov.v@gmail.com
+      name: Danila Kharlamov
+  servers:
+    - url: https://lowrankcoder.com/api/easy-alphabet
+      description: STAGE

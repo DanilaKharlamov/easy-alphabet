@@ -1,0 +1,39 @@
+logging:
+  level:
+    root: info
+  file:
+    name: C:/logs/ea_main/ea-main.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 5
+      total-size-cap: 20MB
+
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ea_main_db
+    username: postgres
+    password: root
+    driverClassName: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 30000
+      connectionTimeout: 30000
+  jpa:
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+ea:
+  content:
+    subject-size: 250
+    offset-percentage: 0.1

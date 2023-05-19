@@ -1,0 +1,40 @@
+logging:
+  level:
+    root: ${LOGGING_LEVEL_ROOT}
+  file:
+    name: ${LOGGING_FILE_NAME}
+  logback:
+    rollingpolicy:
+      max-file-size: ${LOGGING_LOGBACK_ROLLINGPOLICY_MAX_FILE_SIZE}
+      max-history: ${LOGGING_LOGBACK_ROLLINGPOLICY_MAX_HISTORY}
+      total-size-cap: ${LOGGING_LOGBACK_ROLLINGPOLICY_TOTAL_SIZE_CAP}
+
+spring:
+  liquibase:
+    change-log: ${SPRING_LIQUIBASE_CHANGE_LOG}
+    enabled: ${SPRING_LIQUIBASE_ENABLED}
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driverClassName: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 30000
+      connectionTimeout: 30000
+  jpa:
+    show-sql: ${SPRING_JPA_SHOW_SQL_ENABLED}
+    open-in-view: ${SPRING_JPA_OPEN_IN_VIEW_ENABLED}
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC
+
+ea:
+  content:
+    subject-size: ${EA_CONTENT_SUBJECT_SIZE}
+    offset-percentage: ${EA_CONTENT_OFFSET_PERCENTAGE}

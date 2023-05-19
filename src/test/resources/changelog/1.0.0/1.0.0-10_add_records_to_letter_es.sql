@@ -1,0 +1,31 @@
+--liquibase formatted sql
+--changeset dkharlamov:1.0.0-10_add_records_to_letter_es labels:easy-alphabet
+INSERT INTO letter (id, symbol, language_code)
+VALUES (300, 'A', 'es'),
+       (301, 'B', 'es'),
+       (302, 'C', 'es'),
+       (303, 'D', 'es'),
+       (304, 'E', 'es'),
+       (305, 'F', 'es'),
+       (306, 'G', 'es'),
+       (307, 'H', 'es'),
+       (308, 'I', 'es'),
+       (309, 'J', 'es'),
+       (310, 'K', 'es'),
+       (311, 'L', 'es'),
+       (312, 'M', 'es'),
+       (313, 'N', 'es'),
+       (314, 'Ñ', 'es'),
+       (315, 'O', 'es'),
+       (316, 'P', 'es'),
+       (317, 'Q', 'es'),
+       (318, 'R', 'es'),
+       (319, 'S', 'es'),
+       (320, 'T', 'es'),
+       (321, 'U', 'es'),
+       (322, 'V', 'es'),
+       (323, 'W', 'es'),
+       (324, 'X', 'es'),
+       (325, 'Y', 'es'),
+       (326, 'Z', 'es')
+--rollback DELETE FROM letter WHERE id BETWEEN 300 AND 399

@@ -1,0 +1,6 @@
+.idea/
+.git
+Dockerfile
+.gitignore
+.build/
+.resources/application-local.yml

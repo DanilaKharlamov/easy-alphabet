@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd"
+                   logicalFilePath="db/changelog/1.0.0/changelog-1.0.0-cumulative.xml">
+    <include file="1.0.0-01_create_table_letter_mapping.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-03_create_table_letter.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-04_create_table_content.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-05_create_table_paragraph.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-07_add_records_to_letter_ru.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-08_add_records_to_letter_ge.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-09_add_records_to_letter_en.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-10_add_records_to_letter_es.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-11_add_records_to_letter_mapping_ru_ge.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-12_add_records_to_letter_mapping_ru_en.sql" relativeToChangelogFile="true"/>
+    <include file="1.0.0-13_add_records_to_letter_mapping_ge_en.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
